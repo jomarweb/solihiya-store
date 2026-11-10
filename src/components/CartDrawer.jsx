@@ -42,7 +42,7 @@ export default function CartDrawer() {
             <ul className="lines">
               {lines.map(({ product: p, qty }) => (
                 <li key={p.id}>
-                  <Photo src={p.image} alt="" w={160} h={160} />
+                  <Photo src={p.image} alt="" w={160} h={160} eager />
                   <div className="line-info">
                     <Link to={`/product/${p.slug}`} onClick={() => setCartOpen(false)}>{p.name}</Link>
                     <span className="muted">{peso(p.price)} each</span>

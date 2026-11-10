@@ -86,7 +86,7 @@ export default function Checkout() {
           <ul className="lines compact">
             {lines.map(({ product: p, qty }) => (
               <li key={p.id}>
-                <Photo src={p.image} alt="" w={120} h={120} />
+                <Photo src={p.image} alt="" w={120} h={120} eager />
                 <div className="line-info"><span>{p.name}</span><span className="muted">Qty {qty}</span></div>
                 <strong>{peso(p.price * qty)}</strong>
               </li>

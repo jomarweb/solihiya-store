@@ -157,13 +157,14 @@ select { border: 1.5px solid var(--line); background: var(--paper); border-radiu
 .ship-note { padding: .9rem 1.5rem; font-size: .92rem; background: var(--capiz); }
 .meter { display: block; height: 5px; background: var(--line); border-radius: 9px; margin-top: .5rem; overflow: hidden; }
 .meter span { display: block; height: 100%; background: var(--rattan); transition: width .3s; }
-.lines { flex: 1; overflow-y: auto; padding: 0 1.5rem; }
+.lines { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 0 1.5rem; }
 .lines li { display: grid; grid-template-columns: 4.75rem 1fr auto; gap: .9rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); align-items: start; }
 .lines .photo { width: 4.75rem; height: 4.75rem; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
-.line-info { display: grid; gap: .25rem; }
+.line-info { display: grid; gap: .25rem; min-width: 0; }
+.lines li > strong { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .line-info a { font-weight: 600; text-decoration: none; }
 .line-info > span:first-child { font-weight: 600; }
-.line-row { display: flex; gap: 1rem; align-items: center; margin-top: .35rem; }
+.line-row { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; margin-top: .35rem; }
 .line-row .qty button { width: 2rem; height: 2rem; }
 .lines.compact { padding: 0; overflow: visible; }
 .lines.compact li { grid-template-columns: 3.5rem 1fr auto; }
